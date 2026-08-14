@@ -183,15 +183,10 @@ export default function Home() {
       <section className="intro" ref={introRef} data-phase={introPhase}>
         <div className="cover-stage">
           <div className={`story-scene cover-scene ${introPhase === 0 ? "active" : ""}`}>
-            <p className="eyebrow">STYLE / CULTURE / THE ALGORITHM</p>
-            <p className="cover-date">ISSUE 01 · AUG 2026</p>
             <h1><span>Who killed</span><em>taste?</em></h1>
-            <p className="cover-kicker">AN INTERACTIVE<br/>INVESTIGATION</p>
             <figure className="museum-cover-art">
               <CoverTasteMotion/>
-              <figcaption>DIFFERENT THINGS IN · THE SAME THING OUT</figcaption>
             </figure>
-            <div className="article-meta"><span>VOL. 01</span><i /><span>THE FEED</span><b>2026</b></div>
           </div>
           <div className={`story-scene phone-scene ${introPhase === 1 ? "active" : ""}`} aria-hidden="true">
             <div className="scene-phone"><i/><span/><b/></div>
@@ -400,7 +395,6 @@ function XShiftStory({feedTrace,dominantTopic}:{feedTrace:Record<Topic,{availabl
         </div>}
         {phase===2&&<article className="x-conclusion-card final-conclusion"><p>CONCLUSION</p><div><p>It’s easy to dismiss social media as something that only affects us online. But algorithms have consequences that follow us into the real world. The data doesn’t suggest that an algorithm can invent every preference we have. It shows something more subtle: algorithms can make us consume more, choose from a narrower range, and sometimes influence what we believe or do next.</p><p>I’m still the one buying the glasses, playing the podcast, and following the account. But I’m making those choices inside a world that has already been sorted for me. Algorithms don’t have to tell us what to like. They only have to keep showing us the same things until those things begin to shape what we like.</p><TasteTrace trace={feedTrace} dominantTopic={dominantTopic}/></div></article>}
       </div>
-      <a className="x-source" href="https://doi.org/10.1038/s41586-026-10098-2" target="_blank" rel="noreferrer">Source: Gauthier et al., Nature (2026) ↗</a>
     </div>
   </section>;
 }
