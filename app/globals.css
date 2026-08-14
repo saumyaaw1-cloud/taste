@@ -637,3 +637,10 @@ footer{background:var(--aero-navy);color:var(--aero-cream);border-color:rgba(255
 .museum-cover-art::before{background:linear-gradient(180deg,rgba(0,0,0,.2),transparent 38%,rgba(0,0,0,.08) 65%,rgba(0,0,0,.82));z-index:2}
 .museum-cover-art::after{opacity:.08}
 .text-scene .intro-step::before,.text-scene .intro-step-two::before{content:none!important;display:none!important}
+
+/* Keep the cover headline compact and on a single line. */
+.intro .cover-stage h1{left:4vw;bottom:10vh;width:92vw;white-space:nowrap;font-size:clamp(54px,9.2vw,138px);line-height:.9;letter-spacing:-.065em}
+.intro .cover-stage h1 span,.intro .cover-stage h1 em{display:inline}
+.intro .cover-stage h1 span::after{content:" ";white-space:pre}
+.intro .cover-stage h1 em{margin-left:0}
+@media(max-width:560px){.intro .cover-stage h1{left:18px;bottom:12vh;width:calc(100% - 36px);font-size:clamp(40px,11.8vw,66px);line-height:1}}
